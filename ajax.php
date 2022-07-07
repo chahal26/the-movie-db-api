@@ -22,8 +22,9 @@
         
         $results = $movieList->results;
         //Restricting results to max 10
+
         if(count($movieList->results) > 10 ){
-            $results = array_slice($movieList->results,10,19);
+            $results = array_slice($movieList->results,0,10);
         }
         
         echo json_encode($results);
